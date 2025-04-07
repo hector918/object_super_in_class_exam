@@ -1,15 +1,15 @@
 package org.example;
 
 public class Product {
-    private String name;
-    private double price;
-    private String desciption;
+    private final String name;
+    private final double price;
+    private final String description;
 
 
-    public Product(String name, double price, String desciption){
+    public Product(String name, double price, String description){
         this.name = name;
         this.price = price;
-        this.desciption = desciption;
+        this.description = description;
     }
 
     public String getName(){
@@ -21,10 +21,12 @@ public class Product {
     }
 
     public String getDescription(){
-        return this.desciption;
+        return this.description;
     }
 
     public void displayProductInfo(){
-
+        System.out.println("Product Name: " + name);
+        System.out.println("Price: $" + price);
+        System.out.println("Description: " + description);
     }
 }
